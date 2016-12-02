@@ -62,7 +62,7 @@ $(function(){
             single = hash.replace(/[#]/g, '' );
             s = single.replace(/projects-/gi,'');
             url = location.origin + location.pathname + '?awe_portfolio=' + s;
-            //url = 'http://localhost/viska/?awe_portfolio=tets';
+            //url = 'http://www.301creativastudio.com/?awe_portfolio=tets';
             workGrid.find('div.work-item.current').children().removeClass('active');
             workGrid.find('div.work-item.current').removeClass('current' );
             /* IF URL IS PASTED IN ADDRESS BAR AND REFRESHED */

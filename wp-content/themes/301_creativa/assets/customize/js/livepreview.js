@@ -1346,7 +1346,7 @@
 
     function map_reinit(options){
         if($(".awe-map").length){
-        var options = $(".awe-map").attr("data-options"), map_latitude='45.738028',map_longitude='21.224535',map_marker='',theading='Viska Studio',tcontent='Come here and dring a coffee';
+        var options = $(".awe-map").attr("data-options"), map_latitude='45.738028',map_longitude='21.224535',map_marker='',theading='301 creativa Studio',tcontent='Come here and dring a coffee';
         if(options)
         {
             options = JSON.parse(options);

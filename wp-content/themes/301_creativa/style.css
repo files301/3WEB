@@ -88,6 +88,10 @@ Text Domain: AweFramework
     color: #06717c;
 }
 
+#process .item:hover .hr:after {
+    border-top-color: #06717c;
+}
+
 .awe-process .item:hover p {
     background: linear-gradient(#47a799,#01928f);
 }
