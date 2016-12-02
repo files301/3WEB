@@ -42,7 +42,7 @@ function display_social_footer()
         $count +=0.2;
         if(isset($content[$k]) && $content[$k]['enable']==1  && !empty($content[$k]['url']))
             
-            $html .= "<a href=\"{$content[$k]['url']}\" class=\"wow fadeInLeft\" data-wow-delay=\"{$count}\"><i class=\"awe-icon {$v}\"></i></a>";
+            $html .= "<a target=\"_blank\" href=\"{$content[$k]['url']}\" class=\"wow fadeInLeft\" data-wow-delay=\"{$count}\"><i class=\"awe-icon {$v}\"></i></a>";
 
     }
     if($html)
