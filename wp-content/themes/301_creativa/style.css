@@ -155,7 +155,7 @@ Text Domain: AweFramework
 
 #nav-left ul li a {
     text-indent: 32px;
-    font-size: 10px;
+    font-size: 9px;
     color: transparent;
     white-space: nowrap;
     text-transform: uppercase;
@@ -411,6 +411,17 @@ div.pp_default .pp_description {
 .awe-contact .contact-info .awe-icon {
     background: #06717c;
     color: #fff;   
+}
+
+.awe-clients .item {
+    vertical-align: middle;
+    float: none;
+    display: inline-block;
+}
+
+.awe-clients .item img {
+    width: auto;
+    height: 122px;
 }
 
 @media screen and (max-width: 768px){
