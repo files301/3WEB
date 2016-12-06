@@ -83,7 +83,7 @@
                             <div  class="join-team">
                                 <a href="mailto:301@301creativastudio.com?Subject=Quiero%20ser%20parte%20de%20su%20equipo" "class="content">
                                     <img class="join-team-logo" src="<?php echo $join_image ?>" alt="team logo">
-                                    <h2><?php echo $join_text; ?></h2>
+                                    <h2><?php echo "sé parte"; ?></h2>
                                     <p class="add-join-team">
                                         <img src="<?php echo get_template_directory_uri() ?>/assets/images/icon-add-team.png" alt="icon add team logo">
                                     </p>
