@@ -28,12 +28,38 @@ Text Domain: AweFramework
   src: url('assets/Wolf_in_the_City.woff') format('woff'); /* Modern browsers */
 }
 
+
+@font-face {
+  font-family: 'futura';
+  src: url('assets/Futura_Light.woff') format('woff'); /* Modern browsers */
+}
+
+@font-face {
+  font-family: 'futuraB';
+  src: url('assets/Futura_Extra_Bold.woff') format('woff'); /* Modern browsers */
+}
+
+@font-face {font-family: "AJHand W00 Regular";
+  src: url("assets/f84712172ab2e30420e988a4ae11a9dd.eot"), /* IE9*/
+  url("assets/f84712172ab2e30420e988a4ae11a9dd.woff") format("woff"), /* chrome、firefox */
+  url("assets/f84712172ab2e30420e988a4ae11a9dd.svg#AJHand W00 Regular") format("svg"); /* iOS 4.1- */
+}
+
 body {
     color: #333;
 }
 
 h1, h2 {
-    font-family: City;
+    font-family: 'AJHand W00 Regular';
+}
+
+.awe-section .awe-header p, .awe-section .awe-header a, .awe-section .awe-header li, .awe-services .item p, .about p, .awe-teams .item span, .awe-process .item p, .footer p, .menu-nav li a  {
+    font-family: 'futura';
+    letter-spacing: 0.02rem;
+}
+
+.footer p {
+    text-transform: inherit;
 }
 
 #preloader {
@@ -139,22 +165,26 @@ h1, h2 {
 
 .home-content .item h2 {
     width: 70%;
-    font-size: 92px;
-    letter-spacing: 0.3rem;
+    font-size: 60px;
     margin: 0 auto;
     position: relative;
-    line-height: 72px;
-    font-family: City;
-    font-weight: 500;
+    line-height: 80px;
+    font-family: 'AJHand W00 Regular';
+    font-weight: 100;
     text-transform: inherit;
 }
 
 .home-content h3 {
-    font-family: City;
-    font-size: 50px;
-    line-height: 32px;
-    letter-spacing: 0.2rem;
+    font-family: 'AJHand W00 Regular';
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: 0.1rem;
     font-weight: 100;
+}
+
+.awe-teams .join-team h2 {
+    text-transform: inherit;
+    letter-spacing: 0.1rem;
 }
 
 .home-content .item h2:before {
@@ -175,8 +205,8 @@ h1, h2 {
 
 .awe-header h2 {
     text-transform: inherit;
-    font-size: 64px;
-    letter-spacing: 0.28rem;
+    font-size: 38px;
+    line-height: 74px;
 }
 
 .awe-header h2:before {
@@ -265,8 +295,8 @@ h1, h2 {
 /* Color services */
 
 #content-sort .awe-section.awe-parallax .awe-header h2 {
-    font-size: 74px;
-    line-height: 61px;
+    font-size: 40px;
+    line-height: 71px;
 }
 
 #content-sort .awe-section.awe-parallax .awe-header h2, #content-sort .awe-section.awe-parallax p, #content-sort .awe-parallax .awe-services .item h2, #content-sort .awe-parallax .awe-services .item .awe-icon {
@@ -310,14 +340,14 @@ h1, h2 {
     background-size: cover;
 }
 
-.awe-skills .item h2, #process .item h2, #content-sort .awe-parallax .awe-services .item h2, .awe-teams .join-team h2 {
-    font-family: 'Raleway';
+.awe-skills .item h2, #process .item h2, #content-sort .awe-parallax .awe-services .item h2, .awe-teams .item h3, .awe-funfacts .item h3 {
+    font-family: 'futura';
 }
 
 .awe-header .title-big {
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 900;
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.2rem;
 }
 
 /* testimoniales */
@@ -452,7 +482,7 @@ div.pp_default .pp_description {
 }
 
 #contact .contact-info i.awe-icon.fa.fa-map-marker {
-    display: none;
+    display: none !important;
 }
 
 .awe-contact .contact-info .awe-icon {
@@ -536,6 +566,34 @@ div.pp_default .pp_description {
     margin-bottom: 10px;
 }
 
+.wpcf7-form-control-wrap.acceptance-628 {
+    display: inline-block;
+    width: 15px;
+}
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+    background: #2e2e2e;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    font-size: 13px;
+    font-family: futura;
+    letter-spacing: 0.02rem;
+}
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #2e2e2e;
+    bottom: 100%;
+    position: absolute;
+}
+
 @media screen and (max-width: 768px){
     #about .about-img:before {
         display: none;
@@ -544,6 +602,7 @@ div.pp_default .pp_description {
     #about .about-img img {
         left: inherit;
         box-shadow: none;
+        padding: 20px;
     }
     
     .js-header.col-sm-7.wow.fadeInUp.animated, .js-awe-get-items.col-sm-7.title.wow.fadeInhalf-text.animated {
@@ -560,6 +619,18 @@ div.pp_default .pp_description {
     
     .error404 #content-blog {
         width: 70%;
+    }
+    
+    .contact-form.wow.fadeInUp.animated {
+        padding: 20px;
+    }
+    
+    .awe-clients .item {
+        width: 49%;
+    }
+    
+    .awe-clients .item img {
+        height: auto;
     }
 
 }
