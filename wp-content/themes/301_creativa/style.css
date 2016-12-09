@@ -53,7 +53,7 @@ h1, h2 {
     font-family: 'AJHand W00 Regular';
 }
 
-.awe-section .awe-header p, .awe-section .awe-header a, .awe-section .awe-header li, .awe-services .item p, .about p, .awe-teams .item span, .awe-process .item p, .footer p, .menu-nav li a  {
+.awe-section .awe-header p, .awe-section .awe-header a, .awe-section .awe-header li, .awe-services .item p, .about p, .awe-teams .item span, .awe-process .item p, .footer p, .menu-nav li a, .awe-contact .contact-info div p b {
     font-family: 'futura';
     letter-spacing: 0.02rem;
 }
@@ -592,6 +592,10 @@ div.pp_default .pp_description {
     border-bottom: 10px solid #2e2e2e;
     bottom: 100%;
     position: absolute;
+}
+
+.home .scroll-down {
+    background: url(assets/images/mouse.svg) no-repeat;
 }
 
 @media screen and (max-width: 768px){
