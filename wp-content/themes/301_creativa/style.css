@@ -39,23 +39,23 @@ Text Domain: AweFramework
   src: url('assets/Futura_Extra_Bold.woff') format('woff'); /* Modern browsers */
 }
 
-@font-face {font-family: "AJHand W00 Regular";
-  src: url("assets/f84712172ab2e30420e988a4ae11a9dd.eot"), /* IE9*/
-  url("assets/f84712172ab2e30420e988a4ae11a9dd.woff") format("woff"), /* chrome、firefox */
-  url("assets/f84712172ab2e30420e988a4ae11a9dd.svg#AJHand W00 Regular") format("svg"); /* iOS 4.1- */
-}
+font-family: "futura";
 
 body {
     color: #333;
 }
 
-h1, h2 {
-    font-family: 'AJHand W00 Regular';
-}
-
-.awe-section .awe-header p, .awe-section .awe-header a, .awe-section .awe-header li, .awe-services .item p, .about p, .awe-teams .item span, .awe-process .item p, .footer p, .menu-nav li a, .awe-contact .contact-info div p b {
+.awe-section .awe-header p, .awe-section .awe-header a, .awe-section .awe-header li, .awe-services .item p, .about p, .awe-process .item p, .footer p, .menu-nav li a, .awe-contact .contact-info div p b {
     font-family: 'futura';
     letter-spacing: 0.02rem;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.awe-teams .item span {
+	font-family: 'futura';
+    letter-spacing: 0.02rem;
+    line-height: 28px;
 }
 
 .footer p {
@@ -64,6 +64,7 @@ h1, h2 {
 
 #preloader {
     background-image: url(assets/images/font-preload.jpg);
+	background-position:  bottom;
     background-size: cover;
 }
 
@@ -105,6 +106,24 @@ h1, h2 {
     background-color: #06717c;
 }
 
+#button-menu .icon {
+    width: 30px;
+    height: 4px;
+    font-size: 17px;
+    background-color: #4a4a45;
+    margin-bottom: 6px;
+}
+
+#header #button-menu .icon:nth-child(1),#header #button-menu .icon:nth-child(3) {
+	width: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button-menu:hover .icon {
+    width: 28px!important;
+}
+
 #team .join-team {
     background-color: #222426;
 }
@@ -125,6 +144,14 @@ h1, h2 {
 
 #work #filters ul li.select-filter a, #work #filters ul li:hover a, #twitter .item p span, #twitter .item h2, #owl-news .item h2 a:hover, #owl-news .item ul li.wish .fa, #testimonial .item h2, #menu-top li a:hover, #menu-top li.current-page-item a, .menu-nav > li:hover > a, .menu-nav > li.current-page-item > a, .menu-nav .sub-menu .current-page-item a, .menu-nav .sub-menu li:hover a, .blog-title ul li a, #ajaxpage h4, .blog-item h2 a span, .widget_categories ul li a:hover, .widget_recent_entries ul li a:hover, .widget_recent_comments ul li a:hover, .widget_archive ul li a:hover, .widget_meta ul li a:hover, .widget_categories ul li a:hover, .awe-teams .content .awe-icon:hover, #owl-twitter .owl-item .item h2 a, .edit-link a, #commentform .controls > a, .date-comment .comment-edit-link, .comment-respond .comment-reply-title small a, .footer p a, #closeProject a:hover .icon, .process .item:hover .awe-icon, #process .item:hover .hr:after, .blog-title h2 a:hover, #nextProject .fa:hover, #prevProject .fa:hover, #process .item:hover .icon, #process .item:hover h2, #contact .contact-info div p b a:hover, .nextProject .awe-icon:hover, .prevProject .awe-icon:hover {
     color: #06717c;
+}
+
+#header .dev-menu p {
+	position: absolute;
+    right: 60px;
+    top: 30px;
+    font-family: 'futura';
+    font-size: 18px;
 }
 
 #process .item:hover .hr:after {
@@ -165,17 +192,16 @@ h1, h2 {
 
 .home-content .item h2 {
     width: 70%;
-    font-size: 60px;
+    font-size: 40px;
     margin: 0 auto;
     position: relative;
-    line-height: 80px;
-    font-family: 'AJHand W00 Regular';
-    font-weight: 100;
-    text-transform: inherit;
+    line-height: 60px;
+    font-family: 'futura';
+    letter-spacing: 0.3rem;
 }
 
 .home-content h3 {
-    font-family: 'AJHand W00 Regular';
+    font-family: 'futura';
     font-size: 22px;
     line-height: 29px;
     letter-spacing: 0.1rem;
@@ -205,12 +231,14 @@ h1, h2 {
 
 .awe-header h2 {
     text-transform: inherit;
-    font-size: 38px;
-    line-height: 74px;
+    font-size: 0px;
 }
 
 .awe-header h2:before {
-    background-color: #4ca799
+    background-color: #4ca799;
+	height: 2px;
+	width: 48px;
+    transform: rotate(40deg);
 }
 
 .awe-section .awe-header p {
@@ -218,16 +246,21 @@ h1, h2 {
     font-weight: 100;
     line-height: 1.2;
     letter-spacing: 0.02rem;
-    font-size: 18px;
+    font-size: 20px;
 }
 
-#nav-left ul li a {
+#nav-left ul li {
+	border-radius: 0;
+    transform: rotate(45deg);
+}
+
+/*#nav-left ul li a {
     text-indent: 32px;
     font-size: 9px;
     color: transparent;
     white-space: nowrap;
     text-transform: uppercase;
-}
+}*/
 
 #nav-left ul li a:hover {
     color: #ffffff;
@@ -235,10 +268,16 @@ h1, h2 {
 
 #nav-left ul li a:before {
     border-right-color: #06717c;
+	transform: rotate(-45deg);
+    margin-top: -12px;
 }
 
 #nav-left ul li a:after {
     z-index: -1;
+	position: absolute;
+    transform: rotate(-45deg);
+    top: -58px;
+    left: 10px;
 }
 
 #content-sort .awe-section.awe-parallax.skill  .awe-header h2, #content-sort .awe-section.awe-parallax.skill p, #content-sort .awe-section.awe-parallax.news .awe-header h2, #content-sort .awe-section.awe-parallax.news p, .nextProject .awe-icon:hover, .prevProject .awe-icon:hover {
@@ -413,6 +452,10 @@ h1, h2 {
     bottom: 0;
     left: -20px;
     margin: auto;
+}
+
+#about p {
+    margin-top: 20px;
 }
 
 .js-header.col-sm-7.wow.fadeInUp.animated, .js-awe-get-items.col-sm-7.title.wow.fadeInhalf-text.animated {
@@ -596,6 +639,9 @@ div.pp_default .pp_description {
 
 .home .scroll-down {
     background: url(assets/images/mouse.svg) no-repeat;
+    width: 60px;
+    height: 80px;
+    background-size: 100%;
 }
 
 @media screen and (max-width: 768px){

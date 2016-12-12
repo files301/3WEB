@@ -39,12 +39,14 @@
 
             <!-- Button Menu -->
             <?php if(has_nav_menu( 'main_menu' )) : ?>
-                
-                <span id="button-menu">
-                    <i class="icon"></i>
-                    <i class="icon"></i>
-                    <i class="icon"></i>
-                </span>
+                <div class="dev-menu">
+					<p>Menú</p>
+					<span id="button-menu">
+						<i class="icon"></i>
+						<i class="icon"></i>
+						<i class="icon"></i>
+					</span>
+				</div>
                 
             <?php endif; ?>
             <?php do_action('awe_lang_bar'); ?>
