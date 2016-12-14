@@ -115,9 +115,8 @@
 			var $target;
 
 			self.$nav.each(function() {
-				linkHref = self.getHash($(this));
+				linkHref = getValueInglish(self.getHash($(this)));
 				$target = $('#' + linkHref);
-
 				if($target.length) {
 					topPos = $target.offset().top;
 					self.sections[linkHref] = Math.round(topPos);
@@ -142,8 +141,9 @@
 			var self = this;
 			var $link = $(e.currentTarget);
 			var $parent = $link.parent();
-			var newLoc = '#' + self.getHash($link);
-
+			var newLocIng = self.getHash($link);
+			var newLoc = '#' + getValueInglish(newLocIng);			
+			
 			if(!$parent.hasClass(self.config.currentClass)) {
 				//Start callback
 				if(self.config.begin) {
@@ -160,7 +160,7 @@
 				self.scrollTo(newLoc, function() {
 					//Do we need to change the hash?
 					if(self.config.changeHash) {
-						window.location.hash = newLoc;
+						window.location.hash = newLocIng;
 					}
 
 					//Add the auto-adjust on scroll back in
@@ -178,13 +178,11 @@
 
 		scrollChange: function() {
 			var windowTop = this.$win.scrollTop();
-			var position = this.getSection(windowTop);
+			var position = getValueInglish(this.getSection(windowTop), true);
 			var $parent;
-
 			//If the position is set
 			if(position !== null) {
-				$parent = this.$elem.find('a[href$="#' + position + '"]').parent();
-
+				$parent = this.$elem.find('a[href$="#' + position + '"]').parent();				
 				//If it's not already the current section
 				if(!$parent.hasClass(this.config.currentClass)) {
 					//Change the highlighted nav item
@@ -209,7 +207,7 @@
 		unbindInterval: function() {
 			clearInterval(this.t);
 			this.$win.unbind('scroll.onePageNav');
-		}
+		},
 	};
 
 	OnePageNav.defaults = OnePageNav.prototype.defaults;
@@ -220,4 +218,36 @@
 		});
 	};
 
+	getValueInglish = function(value, espanol = false)
+	{
+		//Codigo de rod para el menu en espanol
+		var newLoc = value;
+		if(!espanol)
+		{
+			switch(value) {
+				case 'inicio': newLoc = 'home'; break;
+				case 'lo-que-somos': newLoc = 'about'; break;
+				case 'lo-que-hacemos': newLoc = 'services'; break;
+				case 'equipo-creativo': newLoc = 'team'; break;
+				case 'estadisticas': newLoc = 'skill'; break;
+				case 'como-lo-hacemos': newLoc = 'process'; break;
+				case 'nuestras-marcas': newLoc = 'client'; break;
+				case 'contacto': newLoc = 'contact'; break;
+			}
+		}
+		else
+		{
+			switch(value) {
+				case 'home': newLoc = 'inicio'; break;
+				case 'about': newLoc = 'lo-que-somos'; break;
+				case 'services': newLoc = 'lo-que-hacemos'; break;
+				case 'team': newLoc = 'equipo-creativo'; break;
+				case 'skill': newLoc = 'estadisticas'; break;
+				case 'process': newLoc = 'como-lo-hacemos'; break;
+				case 'client': newLoc = 'nuestras-marcas'; break;
+				case 'contact': newLoc = 'contacto'; break;
+			}
+		}
+		return newLoc;
+	};
 })( jQuery, window , document );
