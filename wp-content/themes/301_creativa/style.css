@@ -236,8 +236,18 @@ body {
     border-top-color: #06717c;
 }
 
+.awe-process .item {
+    padding-top: 78px;
+}
+
 .awe-process .item:hover p {
-    background: linear-gradient(#47a799,#01928f);
+    background: transparent;
+    color: #222;
+}
+
+.awe-process .item:hover p:after {
+    width: 96%;
+    height: 96%;
 }
 
 .awe-process .item .hr {
@@ -259,8 +269,8 @@ body {
     margin: auto;
     left: -15px;
     right: -15px;
-    top: 110px;
-    height: 3px;
+    top: 143px;
+    height: 2px;
     background: linear-gradient(to right, #1b908f, #f3f7df);   
 }
 
@@ -329,6 +339,13 @@ body {
 
 #nav-left ul li, #nav-left ul li a  {
 	border-radius: 0;
+}
+
+#nav-left ul li a {
+    background: #525252
+}
+
+ #nav-left ul li {
     transform: rotate(45deg);
 }
 
@@ -352,10 +369,15 @@ body {
 
 #nav-left ul li a:after {
     z-index: -1;
-	position: absolute;
+    position: absolute;
     transform: rotate(-45deg);
     top: -58px;
     left: 10px;
+    font-family: 'futura';
+    letter-spacing: 0.04rem;
+    text-transform: inherit;
+    font-size: 13px;
+    white-space: nowrap;
 }
 
 #content-sort .awe-section.awe-parallax.skill  .awe-header h2, #content-sort .awe-section.awe-parallax.skill p, #content-sort .awe-section.awe-parallax.news .awe-header h2, #content-sort .awe-section.awe-parallax.news p, .nextProject .awe-icon:hover, .prevProject .awe-icon:hover {
@@ -483,6 +505,55 @@ body {
     background-size: cover;
 }
 
+.process .item p {
+    position: relative;
+    padding: 35px;
+    border: none;
+    vertical-align: middle;
+    min-height: 266px;
+}
+
+.process .item p:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.process .item p:after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    position: absolute;
+    z-index: -1;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.process .owl-item:nth-child(1) .item p:before {
+    background: url(assets/images/part1.jpg);
+}
+
+.process .owl-item:nth-child(2) .item p:before {
+    background: url(assets/images/part2.jpg);
+}
+
+.process .owl-item:nth-child(3) .item p:before {
+    background: url(assets/images/part3.jpg);
+}
+
+
 /* prices */
 
 #plans .item .price {
@@ -551,6 +622,10 @@ body {
     text-align: center;   
 }
 
+.awe-section.contact {
+    background-position: center;
+}
+
 /* testimoniales */
 
 #content-sort .testimonial.awe-section.awe-parallax p, #content-sort .testimonial.awe-section.awe-parallax span {
@@ -563,6 +638,7 @@ body {
 
 /* Contact */
 
+
 #contact label {
     width: 100%;
 }
@@ -570,7 +646,7 @@ body {
 #contact input, #contact textarea {
     width: 100%;
     background: transparent;
-    border: #9e9e9e solid 1px;
+    border: #717171 solid 1px;
     padding: 5px 8px;
 }
 
@@ -599,6 +675,15 @@ span.wpcf7-list-item {
     float: right;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
+}
+
+#contact input[type="submit"]:before {
+    content: "";
+    display: block;
+    background: #4ca799;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
 }
 
 #contact input[type="submit"]:hover {
