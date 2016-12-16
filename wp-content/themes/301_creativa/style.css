@@ -169,7 +169,8 @@ body {
 }
 
 #team .join-team {
-    background-color: #222426;
+    /*background-color: #222426;*/
+    background: url(assets/images/bg-footer.jpg);
 }
 
 #team .join-team:hover {
@@ -448,6 +449,7 @@ body {
 
 .awe-teams .item {
     border-bottom-width: 2px;
+    border-color: transparent;
 }
 
 #team .item .img .content p, #team .item .img .content {
@@ -675,20 +677,13 @@ span.wpcf7-list-item {
     float: right;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
-}
-
-#contact input[type="submit"]:before {
-    content: "";
-    display: block;
-    background: #4ca799;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
+    color: #fff;
+    background-image: url(assets/images/bg-adress-font.jpg);
 }
 
 #contact input[type="submit"]:hover {
-    background-color: #4ca799;
-    color: #fff;
+    background: #fff;
+    color: #444;
 }
 
 #about .about-img {
@@ -786,7 +781,7 @@ div.pp_default .pp_description {
 }
 
 #contact .contact-info > div {
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .awe-contact .contact-info .awe-icon.fa.fa-envelope {
@@ -1001,6 +996,36 @@ span#acepto {
     position: absolute;
 }
 
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
+    position: absolute;
+    width: 149.5%;
+    left: -49.5%;
+    top: 108%;
+    background: url(assets/images/bg-adress-font.jpg);
+    padding: 25px 0;
+    font-size: 1rem;
+    margin: 0;
+    border-width: 1px;
+    font-family: futura;
+    letter-spacing: 0.03rem;
+    text-align: center;
+    z-index: -2;
+}
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok:before {
+    content: "";
+    position: absolute;
+    width: 99%;
+    height: 84%;
+    background: #fff;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
 .home .scroll-down {
     background: url(assets/images/mouse.svg) no-repeat;
     width: 40px;
@@ -1037,6 +1062,94 @@ span#acepto {
     padding-bottom: 200px;
 }
 
+.awe-contact .contact-info h2 {
+    margin: 0;
+}
+
+#contact .contact-info div img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#contact .icon-contact {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.awe-contact .contact-info div p {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+div#owl-twitter {
+    padding-top: 30px;
+}
+
+.awe-twitter {
+    text-align: center;
+}
+
+#content-sort .awe-section.twitter a {
+    color: #fff9c1;
+}
+
+#content-sort .awe-section.twitter .rtw_info {
+    position: relative;
+    padding-top: 15px;
+}
+
+#content-sort .awe-section.twitter .rtw_info:before {
+    content: "";
+    display: block;
+    height: 160%;
+    width: 2px;
+    transform: rotate(40deg);
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+}
+
+#content-sort .awe-section.twitter .rtw_time_short a, #content-sort .awe-section.twitter .rtw_name a, #content-sort .awe-section.twitter .rtw_id a, #content-sort .awe-section.twitter p, #content-sort .awe-section.twitter .rtw_meta {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'futura';
+    padding: 5px 0;
+    display: inline-block;
+}
+
+#content-sort .awe-section.twitter p {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 30px;
+}
+
+#content-sort .rtw_wide_icon {
+    display: none;
+}
+
+#content-sort .awe-section.twitter .rtw_time_short a {
+    font-size: 16px;
+    display: none;
+}
+
+#content-sort .awe-section.twitter .rtw_name a {
+    display: none;
+    }
+
+#content-sort .awe-section.twitter .rtw_id a {
+    font-size: 20px;
+    background: #f5f7f4;
+    padding: 8px;
+    color: #07727d;
+    margin-bottom: 9px;
+}
+
 @media screen and (max-width: 768px){
     
     .home-content .item h2 {
@@ -1046,7 +1159,7 @@ span#acepto {
     }
     
     #about .about-img:before {
-        
+        display: none;
     }
     
     #about .about-img img {
@@ -1072,16 +1185,26 @@ span#acepto {
         width: 70%;
     }
     
-    .contact-form.wow.fadeInUp.animated {
-        padding: 20px;
+    #contact .contact-form {
+        width: 90%;
+        margin: 0 auto;
     }
     
     .awe-clients .item {
         width: 49%;
+        margin-bottom: 40px;
     }
     
     .awe-clients .item img {
         height: auto;
+    }
+    
+    #process .owl-wrapper:before {
+        top: 213px;
+    }
+    
+    #contact .contact-info div img {
+        width: 45px;
     }
 
 }

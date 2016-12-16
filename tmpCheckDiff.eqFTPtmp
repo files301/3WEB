@@ -35,11 +35,14 @@ Text Domain: AweFramework
 }
 
 @font-face {
+  font-family: 'futura-bt';
+  src: url('assets/futura_light_bt.woff') format('woff'); /* Modern browsers */
+}
+
+@font-face {
   font-family: 'futuraB';
   src: url('assets/Futura_Extra_Bold.woff') format('woff'); /* Modern browsers */
 }
-
-font-family: "futura";
 
 body {
     color: #333;
@@ -129,6 +132,11 @@ body {
     background-color: #06717c;
 }
 
+#funfacts {
+    background-image: url(assets/images/font-number.png);
+    background-size: cover;
+}
+
 #button-menu .icon {
     width: 30px;
     height: 4px;
@@ -178,8 +186,12 @@ body {
     border-width: 4px;
 }
 
-#work #filters ul li.select-filter a, #work #filters ul li:hover a, #twitter .item p span, #twitter .item h2, #owl-news .item h2 a:hover, #owl-news .item ul li.wish .fa, #testimonial .item h2, #menu-top li a:hover, #menu-top li.current-page-item a, .menu-nav > li:hover > a, .menu-nav > li.current-page-item > a, .menu-nav .sub-menu .current-page-item a, .menu-nav .sub-menu li:hover a, .blog-title ul li a, #ajaxpage h4, .blog-item h2 a span, .widget_categories ul li a:hover, .widget_recent_entries ul li a:hover, .widget_recent_comments ul li a:hover, .widget_archive ul li a:hover, .widget_meta ul li a:hover, .widget_categories ul li a:hover, .awe-teams .content .awe-icon:hover, #owl-twitter .owl-item .item h2 a, .edit-link a, #commentform .controls > a, .date-comment .comment-edit-link, .comment-respond .comment-reply-title small a, .footer p a, #closeProject a:hover .icon, .process .item:hover .awe-icon, #process .item:hover .hr:after, .blog-title h2 a:hover, #nextProject .fa:hover, #prevProject .fa:hover, #process .item:hover .icon, #process .item:hover h2, #contact .contact-info div p b a:hover, .nextProject .awe-icon:hover, .prevProject .awe-icon:hover {
+#work #filters ul li.select-filter a, #work #filters ul li:hover a, #twitter .item p span, #twitter .item h2, #owl-news .item h2 a:hover, #owl-news .item ul li.wish .fa, #testimonial .item h2, #menu-top li a:hover, #menu-top li.current-page-item a, .menu-nav > li:hover > a, .menu-nav > li.current-page-item > a, .menu-nav .sub-menu .current-page-item a, .menu-nav .sub-menu li:hover a, .blog-title ul li a, #ajaxpage h4, .blog-item h2 a span, .widget_categories ul li a:hover, .widget_recent_entries ul li a:hover, .widget_recent_comments ul li a:hover, .widget_archive ul li a:hover, .widget_meta ul li a:hover, .widget_categories ul li a:hover, .awe-teams .content .awe-icon:hover, #owl-twitter .owl-item .item h2 a, .edit-link a, #commentform .controls > a, .date-comment .comment-edit-link, .comment-respond .comment-reply-title small a, .footer p a, #closeProject a:hover .icon, .process .item:hover .awe-icon, #process .item:hover .hr:after, .blog-title h2 a:hover, #nextProject .fa:hover, #prevProject .fa:hover, #process .item:hover .icon, #process .item:hover h2, #contact .contact-info div p b a:hover, .nextProject .awe-icon:hover, .prevProject .awe-icon:hover, .menu-nav > li.current-page-item > a:hover {
     color: #06717c;
+}
+
+.menu-nav > li.current-page-item > a {
+    color: #8b8b8b;
 }
 
 #header .dev-menu p {
@@ -196,12 +208,46 @@ body {
     color: #fff;
 }
 
+#process.process:before, #process.process:after  {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 50%;
+    height: 166px;
+    position: absolute;
+    top: 0;
+}
+
+#process.process:before {
+    transform-origin: left top;
+    transform: skewY(-5deg);
+    z-index: 1;
+    left: 0;
+}
+
+#process.process:after  {
+    transform-origin: right top;
+    transform: skewY(5deg);
+    z-index: 1;
+    right: 0;
+}
+
 #process .item:hover .hr:after {
     border-top-color: #06717c;
 }
 
+.awe-process .item {
+    padding-top: 78px;
+}
+
 .awe-process .item:hover p {
-    background: linear-gradient(#47a799,#01928f);
+    background: transparent;
+    color: #222;
+}
+
+.awe-process .item:hover p:after {
+    width: 96%;
+    height: 96%;
 }
 
 .awe-process .item .hr {
@@ -223,8 +269,8 @@ body {
     margin: auto;
     left: -15px;
     right: -15px;
-    top: 110px;
-    height: 3px;
+    top: 143px;
+    height: 2px;
     background: linear-gradient(to right, #1b908f, #f3f7df);   
 }
 
@@ -238,7 +284,7 @@ body {
     margin: 0 auto;
     position: relative;
     line-height: 60px;
-    font-family: 'futura';
+    font-family: 'futura-bt';
     letter-spacing: 0.3rem;
 }
 
@@ -293,6 +339,13 @@ body {
 
 #nav-left ul li, #nav-left ul li a  {
 	border-radius: 0;
+}
+
+#nav-left ul li a {
+    background: #525252
+}
+
+ #nav-left ul li {
     transform: rotate(45deg);
 }
 
@@ -316,10 +369,15 @@ body {
 
 #nav-left ul li a:after {
     z-index: -1;
-	position: absolute;
+    position: absolute;
     transform: rotate(-45deg);
     top: -58px;
     left: 10px;
+    font-family: 'futura';
+    letter-spacing: 0.04rem;
+    text-transform: inherit;
+    font-size: 13px;
+    white-space: nowrap;
 }
 
 #content-sort .awe-section.awe-parallax.skill  .awe-header h2, #content-sort .awe-section.awe-parallax.skill p, #content-sort .awe-section.awe-parallax.news .awe-header h2, #content-sort .awe-section.awe-parallax.news p, .nextProject .awe-icon:hover, .prevProject .awe-icon:hover {
@@ -343,6 +401,36 @@ body {
 
 .awe-funfacts .col-ms-12.col-xs-6.col-md-3:first-child .item  .countup, .awe-funfacts .col-ms-12.col-xs-6.col-md-3:first-child .item .plus,  .awe-funfacts .col-ms-12.col-xs-6.col-md-3:first-child .item h3 {
     color: #fffbcf;
+}
+
+.awe-funfacts {
+    background: transparent;
+}
+
+#funfacts {
+    position: relative;
+     padding-bottom: 110px;
+}
+
+#funfacts:after, #funfacts:before {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 50%;
+    height: 83px;
+    position: absolute;
+    bottom: 0;
+}
+
+#funfacts:after {
+    right: 0;
+    transform-origin: right bottom;
+    transform: skewY(-5.05deg);
+}
+
+#funfacts:before {
+    transform-origin: left bottom;
+    transform: skewY(5.05deg);
 }
 
 /* Color funtacts */
@@ -388,7 +476,7 @@ body {
 
 #services .awe-header .js-desc, #team .awe-header .js-desc {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 #content-sort .awe-section.awe-parallax .awe-header h2, #content-sort .awe-section.awe-parallax p, #content-sort .awe-parallax .awe-services .item h2, #content-sort .awe-parallax .awe-services .item .awe-icon {
@@ -416,6 +504,55 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.process .item p {
+    position: relative;
+    padding: 35px;
+    border: none;
+    vertical-align: middle;
+    min-height: 266px;
+}
+
+.process .item p:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.process .item p:after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    position: absolute;
+    z-index: -1;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.process .owl-item:nth-child(1) .item p:before {
+    background: url(assets/images/part1.jpg);
+}
+
+.process .owl-item:nth-child(2) .item p:before {
+    background: url(assets/images/part2.jpg);
+}
+
+.process .owl-item:nth-child(3) .item p:before {
+    background: url(assets/images/part3.jpg);
+}
+
 
 /* prices */
 
@@ -475,9 +612,18 @@ body {
 }
 
 .awe-header .title-big {
-    font-size: 60px;
-    font-weight: 900;
+    font-size: 50px;
+    font-weight: 100;
     letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#contact.awe-section .awe-header p {
+    text-align: center;   
+}
+
+.awe-section.contact {
+    background-position: center;
 }
 
 /* testimoniales */
@@ -492,6 +638,7 @@ body {
 
 /* Contact */
 
+
 #contact label {
     width: 100%;
 }
@@ -499,8 +646,20 @@ body {
 #contact input, #contact textarea {
     width: 100%;
     background: transparent;
-    border: #ccc solid 1px;
+    border: #717171 solid 1px;
     padding: 5px 8px;
+}
+
+.awe-section p {
+    color: rgb(45, 45, 45);
+}
+
+span.wpcf7-list-item {
+    margin: 0;
+}
+
+#contact input[type="checkbox"] {
+ width: 20px;   
 }
 
 #contact input[type="submit"] {
@@ -516,11 +675,13 @@ body {
     float: right;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
+    background-color: #4ca799;
+    color: #fff;
 }
 
 #contact input[type="submit"]:hover {
-    background-color: #4ca799;
-    color: #fff;
+    background-color: #fff;
+    color: #444;
 }
 
 #about .about-img {
@@ -555,6 +716,8 @@ body {
 
 #about p {
     margin-top: 20px;
+    font-size: 19px;
+    line-height: 30px;
 }
 /*
 .js-header.col-sm-7.wow.fadeInUp.animated, .js-awe-get-items.col-sm-7.title.wow.fadeInhalf-text.animated {
@@ -616,7 +779,7 @@ div.pp_default .pp_description {
 }
 
 #contact .contact-info > div {
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .awe-contact .contact-info .awe-icon.fa.fa-envelope {
@@ -641,6 +804,101 @@ div.pp_default .pp_description {
 .awe-clients .item img {
     width: auto;
     height: 122px;
+}
+
+#footer {
+    background: url(assets/images/bg-footer.jpg);
+    min-height: 360px;
+    padding-top: 130px;
+    position: relative;
+}
+
+#footer:after, #footer:before {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 50%;
+    height: 135px;
+    position: absolute;
+    bottom: 100%;
+}
+
+#footer:after {
+    right: 0;
+    transform-origin: right top;
+    transform: skewY(-8.1deg);
+}
+
+#footer:before {
+    transform-origin: left top;
+    transform: skewY(8.1deg);
+}
+
+#footer #scroll-top {
+    transform: rotate(45deg);
+    width: 51px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    z-index: 2;
+}    
+
+#footer #scroll-top:hover {
+    transform: rotate(45deg) scale(1.1);
+}    
+
+
+#footer #scroll-top:before {
+    transform: rotate(-45deg);
+    display: block;
+}
+
+.footer .share .awe-icon {
+    transform: rotate(45deg);
+    margin-right: 30px;
+    border: rgba(255, 255, 255, 0.3) solid 2px;
+    background: transparent;
+}
+
+.footer .share .awe-icon:hover {
+    transform: rotate(-45deg);
+    border: rgba(255, 255, 255, 0.6) solid 2px;
+}
+
+.footer .share .awe-icon:before {
+    transform: rotate(-45deg);
+    display: block;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.footer .share .awe-icon:hover:before {
+    transform: rotate(45deg);
+}
+
+span.wpcf7-not-valid-tip {
+    color: #ffffff;
+    font-size: 0.8em;
+    display: inline-block;
+    background: #07727d;
+    padding: 2px 8px;
+    margin-top: 10px;
+    position: relative;
+    letter-spacing: 0.04rem;
+}
+
+span.wpcf7-not-valid-tip:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #07727d;
+    bottom: 100%;
+    position: absolute;
+}
+
+span#acepto {
+    display: block;
 }
 
 .error404 {
@@ -736,6 +994,21 @@ div.pp_default .pp_description {
     position: absolute;
 }
 
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
+    position: absolute;
+    width: 149.5%;
+    left: -49.5%;
+    top: 108%;
+    background: #fff;
+    padding: 20px;
+    font-size: 1rem;
+    margin: 0;
+    border-width: 1px;
+    font-family: futura;
+    letter-spacing: 0.03rem;
+    text-align: center;
+}
+
 .home .scroll-down {
     background: url(assets/images/mouse.svg) no-repeat;
     width: 40px;
@@ -768,8 +1041,28 @@ div.pp_default .pp_description {
 }
 
 .awe-section.services {
-    padding-top: 380px;
+    padding-top: 450px;
     padding-bottom: 200px;
+}
+
+.awe-contact .contact-info h2 {
+    margin: 0;
+}
+
+#contact .contact-info div img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#contact .icon-contact {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.awe-contact .contact-info div p {
+    vertical-align: middle;
+    display: inline-block;
 }
 
 @media screen and (max-width: 768px){
@@ -781,7 +1074,7 @@ div.pp_default .pp_description {
     }
     
     #about .about-img:before {
-        
+        display: none;
     }
     
     #about .about-img img {
@@ -807,8 +1100,9 @@ div.pp_default .pp_description {
         width: 70%;
     }
     
-    .contact-form.wow.fadeInUp.animated {
-        padding: 20px;
+    #contact .contact-form {
+        width: 90%;
+        margin: 0 auto;
     }
     
     .awe-clients .item {
@@ -817,6 +1111,10 @@ div.pp_default .pp_description {
     
     .awe-clients .item img {
         height: auto;
+    }
+    
+    #process .owl-wrapper:before {
+        top: 213px;
     }
 
 }
