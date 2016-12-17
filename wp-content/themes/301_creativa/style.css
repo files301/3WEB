@@ -59,6 +59,10 @@ body {
     line-height: 28px;
 }
 
+.menu-nav li a {
+    font-family: 'futura-bt';
+}
+
 .awe-section .awe-header .normal:before {
     bottom: 20px;
 }
@@ -1149,6 +1153,11 @@ div#owl-twitter {
     color: #07727d;
     margin-bottom: 9px;
 }
+
+    #process .owl-controls .owl-buttons div {
+        color: #000;
+        border-color: #000;
+    }
 
 @media screen and (max-width: 768px){
     
