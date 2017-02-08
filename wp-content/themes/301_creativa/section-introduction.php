@@ -27,7 +27,6 @@
         </div>
         <!-- Home media Image, Video, Slide -->
         <?php background_show('intro_bg_data'); ?>    
-        <a href="#about" class="scroll-down"></a>
         <?php display_overlay('intro_bg_data'); ?>
     </div>
     <!-- End Header -->

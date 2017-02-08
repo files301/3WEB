@@ -70,7 +70,7 @@
 
 			//Update the positions on resize too
 			this.$win.on('resize.onePageNav', $.proxy(this.getPositions, this));
-
+			
 			return this;
 		},
 
@@ -85,6 +85,8 @@
 
 			self.$win.on('scroll.onePageNav', function() {
 				self.didScroll = true;
+				//Establecer animaciones de elementos
+				setAnimatedElement();
 			});
 
 			self.t = setInterval(function() {
@@ -115,7 +117,7 @@
 			var $target;
 
 			self.$nav.each(function() {
-				linkHref = getValueInglish(self.getHash($(this)));
+				linkHref = getValueInglish(self.getHash($(this)), false);
 				$target = $('#' + linkHref);
 				if($target.length) {
 					topPos = $target.offset().top;
@@ -142,7 +144,7 @@
 			var $link = $(e.currentTarget);
 			var $parent = $link.parent();
 			var newLocIng = self.getHash($link);
-			var newLoc = '#' + getValueInglish(newLocIng);			
+			var newLoc = '#' + getValueInglish(newLocIng, false);			
 			
 			if(!$parent.hasClass(self.config.currentClass)) {
 				//Start callback
@@ -198,7 +200,7 @@
 
 		scrollTo: function(target, callback) {
 			var offset = $(target).offset().top-50;
-
+console.log('emtra');
 			$('html, body').animate({
 				scrollTop: offset
 			}, this.config.scrollSpeed, this.config.easing, callback);
@@ -218,7 +220,7 @@
 		});
 	};
 
-	getValueInglish = function(value, espanol = false)
+	getValueInglish = function(value, espanol)
 	{
 		//Codigo de rod para el menu en espanol
 		var newLoc = value;
@@ -250,4 +252,44 @@
 		}
 		return newLoc;
 	};
+	
+	setAnimatedElement = function()
+	{
+		if(jQuery('#menu-item-222').is('.current-page-item'))
+		{
+			setTimeout(
+				function(){
+					var b = jQuery('#about .before');
+					if(!b.is('.ok'))
+					{
+					    var l = jQuery('#about h2').offset().left - 300;
+						b.css({'left':'-45em', 'opacity': '1'}).animate({'left':l}, 1000).addClass('ok');
+					}
+			}, 500);
+		}
+		
+		if(jQuery('#menu-item-230').is('.current-page-item'))
+		{
+			setTimeout(function(){
+				var b = jQuery('#services .before');
+				if(!b.is('.ok'))
+					var l = jQuery('#services .owl-item').first().offset().left - 190;
+					b.css({'opacity': '1'}).animate({'left':l}, 1000).addClass('ok'); 
+			}, 1800);
+		}
+		
+		if(jQuery('#menu-item-226').is('.current-page-item'))
+		{
+			setTimeout(function(){
+				var b = jQuery('#process .before');
+				if(!b.is('.ok'))
+					b.animate({'width':'43em'}, 1000).addClass('ok'); 
+			}, 500);
+		}
+	}
+	
+	jQuery.each(jQuery('#menu-left-menu a'), function(x,y){ 
+		jQuery(y).attr('title', jQuery(y).html());
+	});
+	
 })( jQuery, window , document );

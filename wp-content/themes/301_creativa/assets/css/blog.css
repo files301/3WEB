@@ -1,0 +1,22 @@
+body.blog {
+    
+}
+
+body.blog #blog-banner {
+    background: url(/wp-content/uploads/2017/01/header.jpg) !important;
+    background-size: cover;
+    background-position: bottom center!important;
+}
+
+body.blog #page-wrap .title-blog span {
+    color: #079ab7;
+    font-family: JaneAust;
+    font-size: 5em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    width: 320px;
+    text-align: left;
+    line-height: 3.3rem;
+}
